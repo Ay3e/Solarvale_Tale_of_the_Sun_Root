@@ -5,58 +5,30 @@ using TMPro;
 
 public class PlantPickUp : MonoBehaviour
 {
-    private bool isPlayerInTrigger;
-
-    [SerializeField] private string nameOfPlant;
-
-    [SerializeField] private GameObject displayUI;
-
-    [SerializeField] private TextMeshProUGUI textMeshProPlantName;
-
-    [SerializeField] private GameObject lupineMaterialFact;
+    [SerializeField] private GameObject parentObject;
+    [SerializeField] private GameObject canvasInteractiveUserInterfacePopUp;
+    [SerializeField] private string nameOfInteract;
+    [SerializeField] private TextMeshProUGUI nameOfInteractTMP;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInTrigger)
+        //When player is in trigger displayUI;
+        canvasInteractiveUserInterfacePopUp.SetActive(true);
+        nameOfInteractTMP.text = nameOfInteract;
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            PlayerInTriggerAction();
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                PlayerNotInTriggerAction();
-                //Lupine UI
-                InventoryManager.lupineAmount++;
-                //Display Lupine Fact
-                lupineMaterialFact.SetActive(true);
-                gameObject.SetActive(false);
-            }
+            //Lupine UI
+            InventoryManager.lupineAmount++;
+            //Display Lupine Fact
+            canvasInteractiveUserInterfacePopUp?.SetActive(false);
+            parentObject.SetActive(false);
         }
-        else
-        {
-            PlayerNotInTriggerAction();
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        isPlayerInTrigger = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isPlayerInTrigger = false;
-    }
-
-    void PlayerInTriggerAction()
-    {
-        Debug.Log("In Trigger");
-        displayUI.SetActive(true);
-        textMeshProPlantName.text = nameOfPlant;
-    }
-
-    void PlayerNotInTriggerAction()
-    {
-        displayUI.SetActive(false);
+        canvasInteractiveUserInterfacePopUp?.SetActive(false);
     }
 }
