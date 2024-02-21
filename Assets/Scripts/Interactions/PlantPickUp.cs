@@ -9,6 +9,17 @@ public class PlantPickUp : MonoBehaviour
     [SerializeField] private GameObject canvasInteractiveUserInterfacePopUp;
     [SerializeField] private string nameOfInteract;
     [SerializeField] private TextMeshProUGUI nameOfInteractTMP;
+    private InventoryManager inventoryManager;
+
+    [SerializeField] private int quantity;
+    [SerializeField] private Sprite sprite;
+    [TextArea][SerializeField] private string itemDescription;
+
+
+    private void Start()
+    {
+        inventoryManager = GameObject.Find("Inventory Manager").GetComponent<InventoryManager>();
+    }
 
 
     // Update is called once per frame
@@ -22,6 +33,9 @@ public class PlantPickUp : MonoBehaviour
             //Lupine UI
             InventoryManager.lupineAmount++;
             //Display Lupine Fact
+
+            inventoryManager.AddItem(nameOfInteract, quantity, sprite, itemDescription);
+
             canvasInteractiveUserInterfacePopUp?.SetActive(false);
             parentObject.SetActive(false);
         }

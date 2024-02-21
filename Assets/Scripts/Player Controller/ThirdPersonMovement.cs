@@ -8,6 +8,9 @@ public class ThirdPersonMovement : MonoBehaviour
     public CharacterController controller;
     public Transform cam;
 
+    [SerializeField] private Animator animator;
+
+
     float turnSmoothVelocity;
     private bool isMoving;
 
@@ -27,6 +30,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            animator.SetBool("isWalking", true);
             isMoving = true;
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -37,6 +41,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isWalking", false);
             isMoving = false;
         }
 

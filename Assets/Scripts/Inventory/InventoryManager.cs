@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryUserInterface;
 
     private bool _isPaused;
+    public ItemSlot[] itemSlot;
     public static int lupineAmount;
 
 
@@ -32,5 +33,29 @@ public class InventoryManager : MonoBehaviour
             Debug.Log(_isPaused ? "Game paused" : "Game resumed");
         }
 
+    }
+
+    public void AddItem(string nameOfInteract, int quantity, Sprite itemSprite, string itemDescription)
+    {
+        Debug.Log("item Name = " + nameOfInteract + "quantity = " + quantity);
+
+        for(int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i].isFull == false)
+            {
+                itemSlot[i].AddItem(nameOfInteract, quantity, itemSprite, itemDescription);
+                
+                return;
+            }
+        }
+    }
+
+    public void DeselectAllSlots()
+    {
+        for(int i = 0;i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].thisItemSelected = false;
+        }
     }
 }
