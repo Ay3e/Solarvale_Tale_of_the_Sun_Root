@@ -28,16 +28,20 @@ public class PlantPickUp : MonoBehaviour
         //When player is in trigger displayUI;
         canvasInteractiveUserInterfacePopUp.SetActive(true);
         nameOfInteractTMP.text = nameOfInteract;
+
         if (Input.GetKeyDown(KeyCode.F))
         {
+            canvasInteractiveUserInterfacePopUp?.SetActive(false);
             //Lupine UI
             InventoryManager.lupineAmount++;
             //Display Lupine Fact
 
-            inventoryManager.AddItem(nameOfInteract, quantity, sprite, itemDescription);
+            int leftOverItems = inventoryManager.AddItem(nameOfInteract, quantity, sprite, itemDescription);
+            if (leftOverItems <= 0)   
+                parentObject.SetActive(false);
+            else
+                quantity = leftOverItems;
 
-            canvasInteractiveUserInterfacePopUp?.SetActive(false);
-            parentObject.SetActive(false);
         }
     }
 
