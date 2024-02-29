@@ -23,6 +23,7 @@ public class InventoryManager : MonoBehaviour
         //textMeshProLupineAmount.text = lupineAmount.ToString();
         if (Input.GetKeyDown(KeyCode.B))
         {
+            CursorManager.setCursor = !CursorManager.setCursor;
             inventoryUserInterface.SetActive(!inventoryUserInterface.activeSelf);
 
             //Step player movement
