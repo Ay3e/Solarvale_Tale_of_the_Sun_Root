@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -20,9 +22,25 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private float verticalVelocity = 0f;
 
+    private float stamina = 7f;
+    private float staminaMax = 7f;
+    private bool playerHasExhausted = false;
+
+    public Slider staminaBar;
+    [SerializeField] private GameObject staminaGameObject;
+    public float dValue;
+
+    private void Start()
+    {
+        staminaMax = stamina;
+        staminaBar.maxValue = staminaMax;
+        staminaGameObject.SetActive(false);
+    }
+
     void Update()
     {
-        Debug.Log(controller.isGrounded);
+        staminaBar.value = stamina;
+        Debug.Log(stamina);
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
@@ -35,14 +53,57 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
-            if (Input.GetKey(KeyCode.LeftShift))
+            //player can sprint when player has stamina and they had not been exhausted before 
+
+            if (!playerHasExhausted)
             {
-                speed = 24f;
-                
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    staminaGameObject.SetActive(true);
+                    //player sprints
+                    speed = 24f;
+                    //when player sprints they lose stamina
+                    stamina = stamina - Time.deltaTime;
+                    //when player loses more than 6 seconds of stamina 
+                    if (stamina <= 0)
+                    {
+                        //become exhausted
+                        playerHasExhausted = true;
+                    }
+                }
+                else
+                {
+                    speed = 12f;
+                    if (stamina >= staminaMax)
+                    {
+                        stamina = staminaMax;
+                        staminaGameObject.SetActive (false);
+                    }
+                    else
+                    {
+                        stamina = stamina + Time.deltaTime;
+                    }
+                }
             }
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            else
             {
                 speed = 12f;
+                if (stamina >= staminaMax)
+                {
+                    stamina = staminaMax;
+                    staminaGameObject.SetActive (false);
+                }
+                else
+                {
+                    stamina = stamina + Time.deltaTime;
+                }
+            }
+
+
+            //if shift has been released player is not exhausted
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                playerHasExhausted = false;
             }
             // Check for jump input when moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
@@ -52,18 +113,28 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
         {
+            speed = 12f;
+            if (stamina >= staminaMax)
+            {
+                stamina = staminaMax;
+                staminaGameObject.SetActive (false);
+            }
+            else
+            {
+                stamina = stamina + Time.deltaTime;
+            }
             // Check for jump input when not moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
             {
                 verticalVelocity = jumpForce;
             }
         }
-
         if (!controller.isGrounded)
         {
             verticalVelocity -= gravity * Time.deltaTime;
         }
-
         controller.Move(new Vector3(0, verticalVelocity, 0) * Time.deltaTime);
+
+
     }
 }
