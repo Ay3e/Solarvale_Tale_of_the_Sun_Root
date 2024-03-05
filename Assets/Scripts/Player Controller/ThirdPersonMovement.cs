@@ -40,7 +40,7 @@ public class ThirdPersonMovement : MonoBehaviour
     void Update()
     {
         staminaBar.value = stamina;
-        Debug.Log(stamina);
+        //Debug.Log(stamina);
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
