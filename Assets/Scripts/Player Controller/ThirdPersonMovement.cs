@@ -30,6 +30,8 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private GameObject staminaGameObject;
     public float dValue;
 
+    [SerializeField] private GameObject cameraCameraFirstPerson;
+
     private void Start()
     {
         staminaMax = stamina;
@@ -47,15 +49,35 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            //Third Person Y
+            if (SwitchingCamera.isThirdPersonCameraActive == true)
+            {
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
+            else
+            {
+
+                float targetAngle = cameraCameraFirstPerson.transform.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                // Get character's forward direction (excluding vertical component)
+                Vector3 characterForward = Vector3.Scale(transform.forward, new Vector3(1, 0, 1)).normalized;
+                // Get character's right direction (excluding vertical component)
+                Vector3 characterRight = Vector3.Scale(transform.right, new Vector3(1, 0, 1)).normalized;
+
+                // Calculate movement direction based on input
+                Vector3 moveDir = characterForward * vertical + characterRight * horizontal;
+                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
             //player can sprint when player has stamina and they had not been exhausted before 
 
-            if (!playerHasExhausted)
+            if (!playerHasExhausted && SwitchingCamera.isThirdPersonCameraActive == true)
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {

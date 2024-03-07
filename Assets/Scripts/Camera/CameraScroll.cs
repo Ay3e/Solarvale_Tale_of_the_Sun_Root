@@ -36,13 +36,13 @@ public class CameraScroll : MonoBehaviour
     {
         Debug.Log("Displaying Up");
         // Implement your code to display content upwards
-        if (currentPOV >= maxPOV)
+        if (currentPOV <= minPOV)
         {
-            currentPOV = maxPOV;
+            currentPOV = minPOV;
         }
         else
         {
-            currentPOV = currentPOV + numberUsedToChangePOV;
+            currentPOV = currentPOV - numberUsedToChangePOV;
         }
         thirdPersonCameraCinemachineFreeLook.m_Lens.FieldOfView = currentPOV;
     }
@@ -51,13 +51,13 @@ public class CameraScroll : MonoBehaviour
     {
         Debug.Log("Displaying Down");
         // Implement your code to display content downwards
-        if (currentPOV <= minPOV)
+        if (currentPOV >= maxPOV)
         {
-            currentPOV = minPOV;
+            currentPOV = maxPOV;
         }
         else
         {
-            currentPOV = currentPOV - numberUsedToChangePOV;
+            currentPOV = currentPOV + numberUsedToChangePOV;
         }
         thirdPersonCameraCinemachineFreeLook.m_Lens.FieldOfView = currentPOV;
     }
