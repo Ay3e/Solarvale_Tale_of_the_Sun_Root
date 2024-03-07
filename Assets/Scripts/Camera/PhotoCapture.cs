@@ -18,6 +18,7 @@ public class PhotoCapture : MonoBehaviour
 
     [Header("Hide all UI")]
     [SerializeField] private GameObject[] hideUI;
+    [SerializeField] private GameObject takePhotoUI;
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
@@ -30,6 +31,7 @@ public class PhotoCapture : MonoBehaviour
     {
         if (SwitchingCamera.isThirdPersonCameraActive == false)
         {
+            takePhotoUI.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!viewingPhoto)
@@ -93,6 +95,7 @@ public class PhotoCapture : MonoBehaviour
 
     void RemovePhoto()
     {
+        takePhotoUI.SetActive(false);
         viewingPhoto = false;
         photoFrame.SetActive(false);
 
