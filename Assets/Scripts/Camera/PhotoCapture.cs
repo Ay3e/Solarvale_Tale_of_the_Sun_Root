@@ -18,7 +18,8 @@ public class PhotoCapture : MonoBehaviour
 
     [Header("Hide all UI")]
     [SerializeField] private GameObject[] hideUI;
-    [SerializeField] private GameObject takePhotoUI;
+    [SerializeField] private GameObject[] takePhotoUI;
+    [SerializeField] private GameObject plusUI;
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
@@ -31,7 +32,12 @@ public class PhotoCapture : MonoBehaviour
     {
         if (SwitchingCamera.isThirdPersonCameraActive == false)
         {
-            takePhotoUI.SetActive(true);
+            for(int i = 0; i < takePhotoUI.Length; i++)
+            {
+                takePhotoUI[i].SetActive(true);
+
+            }
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (!viewingPhoto)
@@ -55,17 +61,17 @@ public class PhotoCapture : MonoBehaviour
     IEnumerator CapturePhoto()
     {
         //Set all Ui to false
-
         for(int i = 0; i < hideUI.Length; i++)
         {
             hideUI[i].SetActive(false);
         }
 
         viewingPhoto = true;
+
         yield return new WaitForEndOfFrame();
 
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
-
+        
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
         ShowPhoto();
@@ -80,6 +86,8 @@ public class PhotoCapture : MonoBehaviour
         StartCoroutine(CameraFlashEffect());
 
         fadingAnimation.Play("PhotoFade");
+        //Show plusUI
+        plusUI.SetActive(false);
     }
 
     IEnumerator CameraFlashEffect()
@@ -95,7 +103,11 @@ public class PhotoCapture : MonoBehaviour
 
     void RemovePhoto()
     {
-        takePhotoUI.SetActive(false);
+        plusUI.SetActive(true);
+        for (int i = 0; i < takePhotoUI.Length; i++)
+        {
+            takePhotoUI[i].SetActive(false);
+        }
         viewingPhoto = false;
         photoFrame.SetActive(false);
 
