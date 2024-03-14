@@ -8,6 +8,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
     //Item data
 
+    public GameObject buttonAndItemImageOfItemSlot;
+
     public string nameOfInteract;
     public int quantity;
     public Sprite itemSprite;
@@ -37,6 +39,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     }
     public int AddItem(string nameOfInteract, int quantity, Sprite itemSprite, string itemDescription)
     {
+        //When Item is picked display Button and Item Image of Item Slot
+        buttonAndItemImageOfItemSlot.SetActive(true);
+
         //Check to see if the slot is already full
         if (isFull)
             return quantity;
@@ -136,6 +141,10 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     private void EmptySlot()
     {
+        //When this gameObject is destroyed remove this array position from the Inventory Manager
+        Destroy(buttonAndItemImageOfItemSlot);
+        inventoryManager.RemoveFirstItem();
+
         quantityText.enabled = false;
         itemImage.sprite = null;
         itemDescription = "";

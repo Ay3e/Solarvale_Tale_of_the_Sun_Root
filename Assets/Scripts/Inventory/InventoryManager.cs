@@ -88,4 +88,22 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
     }
+
+    public void RemoveFirstItem()
+    {
+        if (itemSlot.Length > 0)
+        {
+            // Create a new array with length one less than the current array
+            ItemSlot[] newItemSlot = new ItemSlot[itemSlot.Length - 1];
+
+            // Shift elements to remove the first item
+            for (int i = 0; i < newItemSlot.Length; i++)
+            {
+                newItemSlot[i] = itemSlot[i + 1];
+            }
+
+            // Set the last element to null to remove it
+            itemSlot = newItemSlot;
+        }
+    }
 }
