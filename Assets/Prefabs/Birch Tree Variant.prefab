@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch Tree Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1263149652669372, guid: 41282c525de09854e95ed5d9f9c17fb5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
+      objectReference: {fileID: 0}
     - target: {fileID: 4356059539544546, guid: 41282c525de09854e95ed5d9f9c17fb5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 181.35974
@@ -51,6 +55,11 @@ PrefabInstance:
     - target: {fileID: 4356059539544546, guid: 41282c525de09854e95ed5d9f9c17fb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23373991986269240, guid: 41282c525de09854e95ed5d9f9c17fb5,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23373991986269240, guid: 41282c525de09854e95ed5d9f9c17fb5,
         type: 3}

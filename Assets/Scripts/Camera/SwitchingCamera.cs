@@ -18,7 +18,7 @@ public class SwitchingCamera : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) && !switchDelay)
+        if (Input.GetKey(KeyCode.Q) && !switchDelay && !ThirdPersonMovement.isInDialogue)
         {
             StartCoroutine(SwitchCameraWithDelay());
         }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
@@ -17,9 +16,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] private TextMeshProUGUI quantityText;
 
-    [SerializeField] private Image itemImage;
+    [SerializeField] private UnityEngine.UI.Image itemImage;
 
-    public Image itemDescriptionImage;
+    public UnityEngine.UI.Image itemDescriptionImage;
     public TextMeshProUGUI itemDescriptionNameText;
     public TextMeshProUGUI itemDescriptionText;
 
@@ -29,6 +28,8 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     private InventoryManager inventoryManager;
 
     [SerializeField] private int maxNumberOfItems;
+
+    public static bool submitButtonIsPressed;
 
     private void Start()
     {
@@ -83,16 +84,66 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnLeftClick()
     {
-        inventoryManager.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        thisItemSelected = true;
-        itemDescriptionNameText.text = nameOfInteract;
-        itemDescriptionText.text = itemDescription;
-        itemDescriptionImage.sprite = itemSprite;
+        //InventoryManager.turnInventoryOn = false;
+
+        UseSelectedItem();
+
+        if (!thisItemSelected)
+        {
+            inventoryManager.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            thisItemSelected = true;
+            itemDescriptionNameText.text = nameOfInteract;
+            itemDescriptionText.text = itemDescription;
+            itemDescriptionImage.sprite = itemSprite;
+        }
     }
 
     public void OnRightClick()
     {
 
+    }
+    public void SubmitButton()
+    {
+
+        Debug.Log("Submit button pressed");
+        //Item has been used then get out of dialogue
+        InventoryManager.turnInventoryOn = false;
+
+        SickGuyDialogue.isInDialogueOptions = false;
+        SickGuyDialogue.currentDialogueIndex++;
+        SickGuyDialogue.dialogueOptionChosen = false;
+
+        //Disable
+    }
+
+    private void UseSelectedItem()
+    {
+        if (thisItemSelected && ThirdPersonMovement.isInDialogue)
+        {
+            //UseItem
+            this.quantity -= 1;
+            quantityText.text = this.quantity.ToString();
+            if (this.quantity <= 0)
+            {
+                EmptySlot();
+            }
+
+            //Display submit button
+            InventoryManager.submitButtonOn = true;
+        }
+    }
+
+    private void EmptySlot()
+    {
+        quantityText.enabled = false;
+        itemImage.sprite = null;
+        itemDescription = "";
+        nameOfInteract = "";
+
+        itemDescriptionNameText.text = nameOfInteract;
+        itemDescriptionText.text = itemDescription;
+        itemDescriptionImage.sprite = null;
+        itemSprite = null;
     }
 }

@@ -32,6 +32,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     [SerializeField] private GameObject cameraCameraFirstPerson;
 
+    public static bool isInDialogue;
+
     private void Start()
     {
         staminaMax = stamina;
@@ -47,7 +49,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
+        if (direction.magnitude >= 0.1f && !ThirdPersonMovement.isInDialogue)
         {
             //Third Person Y
             if (SwitchingCamera.isThirdPersonCameraActive == true)
@@ -128,7 +130,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 playerHasExhausted = false;
             }
             // Check for jump input when moving
-            if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
+            if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
                 verticalVelocity = jumpForce;
             }
@@ -146,7 +148,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 stamina = stamina + Time.deltaTime;
             }
             // Check for jump input when not moving
-            if (Input.GetKey(KeyCode.Space) && controller.isGrounded)
+            if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
                 verticalVelocity = jumpForce;
             }

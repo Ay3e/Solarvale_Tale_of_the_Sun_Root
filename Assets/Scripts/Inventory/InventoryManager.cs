@@ -7,22 +7,31 @@ public class InventoryManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject inventoryUserInterface;
+    [SerializeField] private GameObject submitButton;
 
     private bool _isPaused;
     public ItemSlot[] itemSlot;
     public static int lupineAmount;
 
+    public static bool turnInventoryOn;
+    public static bool submitButtonOn;
+
 
     private void Start()
     {
         inventoryUserInterface.SetActive(false);
+        submitButton.SetActive(false);
     }
 
     private void Update()
     {
         //textMeshProLupineAmount.text = lupineAmount.ToString();
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.B) && !ThirdPersonMovement.isInDialogue)
         {
+            if (turnInventoryOn)
+            {
+                submitButton.SetActive(true);
+            }
             CursorManager.setCursor = !CursorManager.setCursor;
             inventoryUserInterface.SetActive(!inventoryUserInterface.activeSelf);
 
@@ -34,6 +43,22 @@ public class InventoryManager : MonoBehaviour
             Debug.Log(_isPaused ? "Game paused" : "Game resumed");
         }
 
+        if (turnInventoryOn && ThirdPersonMovement.isInDialogue)
+        {
+            if (submitButtonOn)
+            {
+                submitButton.SetActive(true);
+            }
+            inventoryUserInterface.SetActive(true);
+        }
+        if(!turnInventoryOn && ThirdPersonMovement.isInDialogue)
+        {
+            if (!submitButtonOn)
+            {
+                submitButton.SetActive(false) ;
+            }
+            inventoryUserInterface.SetActive(false);
+        }
     }
 
     public int AddItem(string nameOfInteract, int quantity, Sprite itemSprite, string itemDescription)
