@@ -23,6 +23,7 @@ public class LitterPickUp : MonoBehaviour
             canvasInteractiveUserInterfacePopUp?.SetActive(false);
             //Instead of destroying the object change the object
             Debug.Log("Trash Picked Up");
+            LitterManager.activeSpawnersCount--;
         }
     }
 

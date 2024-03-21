@@ -128,19 +128,4 @@ public class SickGuyDialogue : MonoBehaviour
         canvasInteractiveUserInterfacePopUp?.SetActive(false);
         dialogueParent.SetActive(false);
     }
-
-    public void DialogueOptionButton0()
-    {
-
-    }
-
-    public void DialogueOptionButton1()
-    {
-
-    }
-
-    public void DialogueOptionButton2()
-    {
-
-    }
 }

@@ -7,18 +7,19 @@ using UnityEngine.UI;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
-    public CharacterController controller;
-    public Transform cam;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private Transform cam;
 
     [SerializeField] private Animator animator;
 
 
     float turnSmoothVelocity;
 
-    public float speed = 12f;
-    public float turnSmoothTime = 0.1f;
-    public float gravity = 20f; // Adjust gravity as per your needs
-    public float jumpForce = 8f; // Adjust jump force as per your needs
+    [SerializeField] private float speed = 12f;
+    [SerializeField] private float turnSmoothTime = 0.1f;
+    [SerializeField] private float gravity = 20f; // Adjust gravity as per your needs
+    [SerializeField] private float jumpForce = 8f; // Adjust jump force as per your needs
+    [SerializeField] private float speedMultiplier = 2.0f;
 
     private float verticalVelocity = 0f;
 
@@ -28,7 +29,6 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public Slider staminaBar;
     [SerializeField] private GameObject staminaGameObject;
-    public float dValue;
 
     [SerializeField] private GameObject cameraCameraFirstPerson;
 
@@ -51,9 +51,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f && !ThirdPersonMovement.isInDialogue)
         {
+            animator.SetBool("isWalking", true);
             //Third Person Y
             if (SwitchingCamera.isThirdPersonCameraActive == true)
             {
+                animator.speed = speedMultiplier;
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -85,6 +87,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 {
                     staminaGameObject.SetActive(true);
                     //player sprints
+                    animator.speed = speedMultiplier*2;
                     speed = 24f;
                     //when player sprints they lose stamina
                     stamina = stamina - Time.deltaTime;
@@ -97,6 +100,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 }
                 else
                 {
+                    animator.speed = speedMultiplier;
                     speed = 12f;
                     if (stamina >= staminaMax)
                     {
@@ -111,6 +115,7 @@ public class ThirdPersonMovement : MonoBehaviour
             }
             else
             {
+                animator.speed = speedMultiplier;
                 speed = 12f;
                 if (stamina >= staminaMax)
                 {
@@ -137,6 +142,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isWalking", false);
             speed = 12f;
             if (stamina >= staminaMax)
             {
@@ -158,7 +164,5 @@ public class ThirdPersonMovement : MonoBehaviour
             verticalVelocity -= gravity * Time.deltaTime;
         }
         controller.Move(new Vector3(0, verticalVelocity, 0) * Time.deltaTime);
-
-
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -16,11 +17,19 @@ public class InventoryManager : MonoBehaviour
     public static bool turnInventoryOn;
     public static bool submitButtonOn;
 
+    [Header("Materials")]
+    [SerializeField] private GameObject buttonMaterialsTab;
+
+    [Header("Album")]
+    [SerializeField] private GameObject buttonAlbumTab;
+
 
     private void Start()
     {
         inventoryUserInterface.SetActive(false);
         submitButton.SetActive(false);
+        buttonMaterialsTab.SetActive(true);
+        buttonAlbumTab.SetActive(false);
     }
 
     private void Update()
@@ -53,10 +62,7 @@ public class InventoryManager : MonoBehaviour
         }
         if(!turnInventoryOn && ThirdPersonMovement.isInDialogue)
         {
-            if (!submitButtonOn)
-            {
-                submitButton.SetActive(false) ;
-            }
+            submitButton.SetActive(false) ;
             inventoryUserInterface.SetActive(false);
         }
     }
@@ -105,5 +111,17 @@ public class InventoryManager : MonoBehaviour
             // Set the last element to null to remove it
             itemSlot = newItemSlot;
         }
+    }
+
+    public void ButtonMaterial()
+    {
+        buttonMaterialsTab.SetActive(true);
+        buttonAlbumTab.SetActive(false);
+    }
+
+    public void ButtonAlbum()
+    {
+        buttonMaterialsTab.SetActive(false);
+        buttonAlbumTab.SetActive(true);
     }
 }

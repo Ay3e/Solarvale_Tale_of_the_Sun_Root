@@ -7,7 +7,6 @@ public class CollisionDetector : MonoBehaviour
     [SerializeField] private GameObject pickUpUserInterfaceGameObject;
     private bool _isPlayerInTrigger;
 
-
     private void Update()
     {
         if (_isPlayerInTrigger)
