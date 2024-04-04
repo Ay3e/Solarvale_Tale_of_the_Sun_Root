@@ -689,7 +689,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -712,7 +712,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -831,7 +831,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -854,7 +854,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -1260,9 +1260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 882416354}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &129740693
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b45658c18910c4e8fbe4cc5c8abd5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerParent: {fileID: 405529311}
+  flowerParent: {fileID: 0}
 --- !u!4 &177550717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 330371168362392244, guid: 91d84d7c6c3c89c4b8df8550660ccdb2,
@@ -1656,7 +1656,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -1679,7 +1679,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -2239,7 +2239,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -2262,7 +2262,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -3002,9 +3002,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1090438382}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &272210500
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3080,7 +3080,7 @@ GameObject:
   - component: {fileID: 292315670}
   - component: {fileID: 292315669}
   m_Layer: 5
-  m_Name: Interact Name Text (TMP)
+  m_Name: Name of Interact (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3125,7 +3125,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lupine
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 773c8c780a7cda44d8fe35c197cfbaca, type: 2}
   m_sharedMaterial: {fileID: 7985063987654315988, guid: 773c8c780a7cda44d8fe35c197cfbaca,
@@ -3311,6 +3313,147 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1602338086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &312769554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1390544050}
+    m_Modifications:
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -579.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9910002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 565.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46886873
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8832679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 124.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC - Kyle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 367955717}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 312769558}
+    - targetCorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 312769557}
+  m_SourcePrefab: {fileID: 100100000, guid: 7d67ac5cfda0b944580afbed7561ec82, type: 3}
+--- !u!4 &312769555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+    type: 3}
+  m_PrefabInstance: {fileID: 312769554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &312769556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+    type: 3}
+  m_PrefabInstance: {fileID: 312769554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &312769557
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312769556}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.01
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &312769558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312769556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec55c449c4258647b8cd09209d869e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpUserInterfaceGameObject: {fileID: 367955716}
 --- !u!1 &319120822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3357,9 +3500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1208230627}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &319120825
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3701,7 +3844,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -3724,7 +3867,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -3904,6 +4047,91 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6062665613cf32d4cb2c2c902a407447, type: 3}
+--- !u!1 &367955716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367955717}
+  - component: {fileID: 367955719}
+  - component: {fileID: 367955718}
+  m_Layer: 0
+  m_Name: User Interface Game Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367955717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367955716}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 312769555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367955718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367955716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4186e3f8e77cf0f4480080662bb2f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  nameOfInteract: Kyle
+  nameOfInteractTMP: {fileID: 292315669}
+  dialogueParent: {fileID: 1555134037}
+  dialogueInput:
+  - I heard the neighbouring islands have been dumping landfill into the ocean again
+  - It really pains me to see conditions like these still exist
+  - I appreciate the work that you do
+  - No problem
+  dialogueName:
+  - Kyle
+  - Kyle
+  - Kyle
+  - Lola
+  dialogueTMP: {fileID: 749000636}
+  dialogueNPCNameTMP: {fileID: 1846256838}
+  hideUI:
+  - {fileID: 1718667153}
+  cinemachineBrain: {fileID: 1643853762}
+--- !u!135 &367955719
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367955716}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.67
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &370190246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 330371168362392244, guid: 91d84d7c6c3c89c4b8df8550660ccdb2,
@@ -4634,9 +4862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1146241096}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &426818418
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4858,9 +5086,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1762389987}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &454910858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4979,9 +5207,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1646189625}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &462211020
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5595,7 +5823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 533517034}
   m_Layer: 0
-  m_Name: Leaf - Gecko
+  m_Name: Gecko - Leaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5664,9 +5892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 958231940}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &538705716
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5700,7 +5928,7 @@ GameObject:
   - component: {fileID: 554451537}
   - component: {fileID: 554451536}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: '"E"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5869,9 +6097,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 2028872082}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &578405189
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5978,9 +6206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 2004884039}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &599631717
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6235,7 +6463,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -6258,7 +6486,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -6577,9 +6805,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 496511937}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &658758369
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6909,7 +7137,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -6932,7 +7160,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -7425,7 +7653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: 29, y: -40}
   m_SizeDelta: {x: 1720, y: 189.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749000636
@@ -7824,7 +8052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 761622706}
   m_Layer: 0
-  m_Name: Harris Carter - NPC
+  m_Name: NPC - Harris Carter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7971,9 +8199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 887699325}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &792042887
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8571,7 +8799,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -8594,7 +8822,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -9183,6 +9411,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1076810325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &834881461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834881462}
+  - component: {fileID: 834881464}
+  - component: {fileID: 834881463}
+  m_Layer: 5
+  m_Name: Whale Rock Clean Up Bar (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &834881462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834881461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1900003, y: 3.1900003, z: 3.1900003}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1442010494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -794, y: 3.3768}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &834881463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834881461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4263e76b3b8a9034ca75b423c5df782f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &834881464
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834881461}
+  m_CullTransparentMesh: 1
 --- !u!1 &844449708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7477057596477734255, guid: 61c16384c8118334f89c74f30b16fd96,
@@ -9377,7 +9680,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -9400,7 +9703,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -9618,7 +9921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &861170834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10435,7 +10738,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -10458,7 +10761,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -10595,7 +10898,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -10618,7 +10921,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -10953,6 +11256,94 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1514617606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1009567283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009567284}
+  - component: {fileID: 1009567285}
+  - component: {fileID: 1009567286}
+  m_Layer: 0
+  m_Name: User Interface Game Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1009567284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009567283}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1367432774}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1009567285
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009567283}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.67
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1009567286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009567283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4186e3f8e77cf0f4480080662bb2f515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  nameOfInteract: Laura
+  nameOfInteractTMP: {fileID: 292315669}
+  dialogueParent: {fileID: 1555134037}
+  dialogueInput:
+  - Happy birthday Lola, finished talking to grandma?
+  - Thanks Laura, and yeah look what I got
+  - (Zooms in camera)
+  - WOW, pretty neet what does it do?
+  - (Snaps photo)
+  dialogueName:
+  - Laura
+  - Lola
+  - 
+  - Laura
+  - 
+  - Lola
+  dialogueTMP: {fileID: 749000636}
+  dialogueNPCNameTMP: {fileID: 1846256838}
+  hideUI:
+  - {fileID: 1718667153}
+  cinemachineBrain: {fileID: 1643853762}
 --- !u!1 &1009740694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8774726762596875410, guid: 91d84d7c6c3c89c4b8df8550660ccdb2,
@@ -11216,7 +11607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1031682083
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11829,7 +12220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1069214651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13079,7 +13470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15408,6 +15799,147 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365709559}
   m_CullTransparentMesh: 1
+--- !u!1001 &1367432773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1390544050}
+    m_Modifications:
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -745.123
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.83813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 174.55582
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5775523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.81635374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 109.443
+      objectReference: {fileID: 0}
+    - target: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC - Laura
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1009567284}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1367432776}
+    - targetCorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1367432778}
+  m_SourcePrefab: {fileID: 100100000, guid: 7d67ac5cfda0b944580afbed7561ec82, type: 3}
+--- !u!4 &1367432774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4882481920500871233, guid: 7d67ac5cfda0b944580afbed7561ec82,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367432773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367432775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5226954981596785403, guid: 7d67ac5cfda0b944580afbed7561ec82,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367432773}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1367432776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367432775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec55c449c4258647b8cd09209d869e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpUserInterfaceGameObject: {fileID: 1009567283}
+--- !u!135 &1367432778
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367432775}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1368681267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 330371168362392244, guid: 91d84d7c6c3c89c4b8df8550660ccdb2,
@@ -15447,6 +15979,8 @@ Transform:
   - {fileID: 1139572495}
   - {fileID: 761622706}
   - {fileID: 533517034}
+  - {fileID: 1367432774}
+  - {fileID: 312769555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398262451 stripped
@@ -15598,9 +16132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1094877563}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &1405941706
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16116,6 +16650,9 @@ RectTransform:
   - {fileID: 520038299}
   - {fileID: 201594195}
   - {fileID: 238630458}
+  - {fileID: 834881462}
+  - {fileID: 1729684604}
+  - {fileID: 1977953433}
   - {fileID: 1151204167}
   m_Father: {fileID: 1718667154}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17014,9 +17551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 508537644}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &1516511879
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17526,7 +18063,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -17549,7 +18086,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -18388,7 +18925,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -18411,7 +18948,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -19071,7 +19608,7 @@ GameObject:
   - component: {fileID: 1658568964}
   - component: {fileID: 1658568963}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: '"Take Photo"'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20296,6 +20833,81 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6360558719573625917, guid: abd70b3d996769e48a9a57c1fa588b95, type: 3}
+--- !u!1 &1729684603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1729684604}
+  - component: {fileID: 1729684606}
+  - component: {fileID: 1729684605}
+  m_Layer: 5
+  m_Name: Whale Rock Clean Up Bar (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1729684604
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729684603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.0704045, y: 3.0704045, z: 3.0704045}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1442010494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -794, y: 3.8}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1729684605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729684603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4263e76b3b8a9034ca75b423c5df782f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 0
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1729684606
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729684603}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1732248420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20308,7 +20920,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -20331,7 +20943,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -21503,7 +22115,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -21526,7 +22138,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -21644,9 +22256,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 755287392}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &1828442431
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21695,7 +22307,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: sprite
@@ -21718,7 +22330,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 2079246404756150206, guid: c84b18f1e62a8ae4591883448bb9cf3e,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -22296,7 +22908,6 @@ MonoBehaviour:
   dialogueNPCNameTMP: {fileID: 1846256838}
   hideUI:
   - {fileID: 1718667153}
-  - {fileID: 861170833}
   cinemachineBrain: {fileID: 1643853762}
   isThereDialogueOptions: 1
   atWhatPointIsTheDialogueOptioninDialogue: 6
@@ -22423,9 +23034,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 637326690}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &1891188071
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23557,6 +24168,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 734520538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1977953432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977953433}
+  - component: {fileID: 1977953435}
+  - component: {fileID: 1977953434}
+  m_Layer: 5
+  m_Name: Whale Rock Clean Up Bar (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1977953433
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977953432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1316, y: 3.1316, z: 3.1316}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1442010494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -794, y: 4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1977953434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977953432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.90588236, g: 0.24313726, b: 0.21960784, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4263e76b3b8a9034ca75b423c5df782f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 0.036
+  m_FillClockwise: 0
+  m_FillOrigin: 2
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1977953435
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977953432}
+  m_CullTransparentMesh: 1
 --- !u!1 &1986782104
 GameObject:
   m_ObjectHideFlags: 0
@@ -23750,9 +24436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1621423050}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &1989714818
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24540,9 +25226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1575670418}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &2032736358
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24796,9 +25482,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1687241214}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &2038738545
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25178,7 +25864,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -25201,7 +25887,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp
@@ -25469,9 +26155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1466781160}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &2091963013
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25859,9 +26545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 1097824749}
-  canvasInteractiveUserInterfacePopUp: {fileID: 861170833}
+  canvasInteractiveUserInterfacePopUp: {fileID: 0}
   nameOfInteract: Trash
-  nameOfInteractTMP: {fileID: 292315669}
+  nameOfInteractTMP: {fileID: 0}
 --- !u!135 &2131417801
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26042,7 +26728,7 @@ PrefabInstance:
     - target: {fileID: 2601114662382167294, guid: e7774854734362c4da8bd5631f5b7e70,
         type: 3}
       propertyPath: m_Name
-      value: Lola - Main Character
+      value: Main Character - Lola
       objectReference: {fileID: 0}
     - target: {fileID: 2601114662382167294, guid: e7774854734362c4da8bd5631f5b7e70,
         type: 3}
@@ -26465,7 +27151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ui
       value: 
-      objectReference: {fileID: 861170833}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: sprite
@@ -26488,7 +27174,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nameOfInteractTMP
       value: 
-      objectReference: {fileID: 292315669}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382153244357741927, guid: d1d17fd6f7fd4974c954683230ec1f4f,
         type: 3}
       propertyPath: canvasInteractiveUserInterfacePopUp

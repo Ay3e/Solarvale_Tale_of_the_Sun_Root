@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 
 public class CleanlinessManager : MonoBehaviour
 {
@@ -34,5 +35,21 @@ public class CleanlinessManager : MonoBehaviour
 
         cleanlinessDecimalLessThanOneSmooth = Mathf.Lerp(cleanlinessDecimalLessThanOneSmooth, cleanlinessDecimalLessThanOneTarget, Time.deltaTime * transitionSpeed);
         cleanlinessCircleIcon.fillAmount = cleanlinessDecimalLessThanOneSmooth;
+
+        if (roundedPercentage >= 60)
+        {
+            // Green (20B946)
+            cleanlinessCircleIcon.color = new Color(32f / 255f, 185f / 255f, 70f / 255f);
+        }
+        else if (roundedPercentage < 60 && roundedPercentage >= 20)
+        {
+            // Yellow (E7D138)
+            cleanlinessCircleIcon.color = new Color(231f / 255f, 209f / 255f, 56f / 255f);
+        }
+        else if (roundedPercentage < 20)
+        {
+            // Red (E73E38)
+            cleanlinessCircleIcon.color = new Color(231f / 255f, 62f / 255f, 56f / 255f);
+        }
     }
 }
