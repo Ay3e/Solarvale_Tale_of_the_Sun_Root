@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NoOptionDialogue : MonoBehaviour
@@ -24,10 +25,13 @@ public class NoOptionDialogue : MonoBehaviour
     [Header("Cinemachine")]
     [SerializeField] private CinemachineBrain cinemachineBrain;
 
+    public bool hasFinishedTalking;
+
 
     private void Start()
     {
         dialogueParent.SetActive(false);
+        hasFinishedTalking = false;
     }
     // Update is called once per frame
     void Update()
@@ -87,6 +91,7 @@ public class NoOptionDialogue : MonoBehaviour
                 }
                 CursorManager.setCursor = false;
                 cinemachineBrain.enabled = true;
+                hasFinishedTalking = true;
             }
         }
     }
@@ -95,5 +100,6 @@ public class NoOptionDialogue : MonoBehaviour
     {
         canvasInteractiveUserInterfacePopUp?.SetActive(false);
         dialogueParent.SetActive(false);
+        hasFinishedTalking = false;
     }
 }
