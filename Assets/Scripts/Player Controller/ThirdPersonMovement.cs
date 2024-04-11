@@ -137,6 +137,7 @@ public class ThirdPersonMovement : MonoBehaviour
             // Check for jump input when moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
+                // Perform the jump
                 verticalVelocity = jumpForce;
             }
         }
@@ -156,6 +157,7 @@ public class ThirdPersonMovement : MonoBehaviour
             // Check for jump input when not moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
+                // Perform the jump
                 verticalVelocity = jumpForce;
             }
         }
