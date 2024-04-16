@@ -28,4 +28,16 @@ public class HarrisDialogueOptions : MonoBehaviour
         SickGuyDialogue.isInDialogueOptions = false;
         SickGuyDialogue.currentDialogueIndex++;
     }
+
+    public void DialogueOptionButton2()
+    {
+        SickGuyDialogue.dialogueOptionChosen = true;
+        //Disable all buttons
+        dialogueOptions0.SetActive(false);
+        dialogueOptions1.SetActive(false);
+        //Check if any flowers are in inventory
+
+        //If they do display inventory
+        InventoryManager.turnInventoryOn = true;
+    }
 }
