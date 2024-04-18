@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class GreenGuardGauge : MonoBehaviour
 {
     [SerializeField] private GameObject greenGuardUI;
 
     [SerializeField] private GameObject jacqualineNoOptionDialogue;
+
+    private bool greenGuardActivated = false;
 
 
     private void Start()
@@ -19,7 +22,17 @@ public class GreenGuardGauge : MonoBehaviour
     {
         if (jacqualineNoOptionDialogue.GetComponent<NoOptionDialogue>().hasFinishedTalking)
         {
+            greenGuardActivated = true;
+
+            // Activate GreenGuard UI
             greenGuardUI.SetActive(true);
+
+            // Track the event using Unity Analytics
+            TrackGreenGuardActivatedEvent();
         }
+    }
+    private void TrackGreenGuardActivatedEvent()
+    {
+        Analytics.CustomEvent("GreenGuardActivated");
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class PhotoCapture : MonoBehaviour
 {
@@ -25,7 +26,9 @@ public class PhotoCapture : MonoBehaviour
 
     private Texture2D screenCapture;
     private bool viewingPhoto;
-    private bool canTakePhoto = true;
+
+    [Header("Analytics Details")]
+    private int numberOfPhotosCaptured = 0;
 
     private void Start()
     {
@@ -64,7 +67,13 @@ public class PhotoCapture : MonoBehaviour
 
     IEnumerator CapturePhoto()
     {
-        canTakePhoto = false; // Disable photo capture during cooldown
+        //Analytics
+        numberOfPhotosCaptured++;
+        Debug.Log("numberOfPhotosCaptured: " + numberOfPhotosCaptured);
+        Analytics.CustomEvent("Photo Captured", new Dictionary<string, object>
+        {
+            { "Number of Photos Captured", numberOfPhotosCaptured }
+        });
 
         // Set all UI to false
         foreach (var ui in hideUI)
@@ -85,8 +94,6 @@ public class PhotoCapture : MonoBehaviour
         ShowPhoto();
 
         yield return new WaitForSeconds(1f); // Cooldown period
-
-        canTakePhoto = true; // Enable photo capture after cooldown
     }
 
     void ShowPhoto()
