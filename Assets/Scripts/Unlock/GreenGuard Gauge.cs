@@ -9,8 +9,6 @@ public class GreenGuardGauge : MonoBehaviour
 
     [SerializeField] private GameObject jacqualineNoOptionDialogue;
 
-    private bool greenGuardActivated = false;
-
 
     private void Start()
     {
@@ -22,7 +20,6 @@ public class GreenGuardGauge : MonoBehaviour
     {
         if (jacqualineNoOptionDialogue.GetComponent<NoOptionDialogue>().hasFinishedTalking)
         {
-            greenGuardActivated = true;
 
             // Activate GreenGuard UI
             greenGuardUI.SetActive(true);

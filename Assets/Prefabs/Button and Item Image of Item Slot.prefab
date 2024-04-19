@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c299de42061594b45aad1cfc38a14271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonAndItemImageOfItemSlot: {fileID: 0}
   nameOfInteract: 
   quantity: 0
   itemSprite: {fileID: 0}
