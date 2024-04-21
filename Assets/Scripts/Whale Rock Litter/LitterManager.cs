@@ -10,7 +10,7 @@ public class LitterManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(activeSpawnersCount);
+        //Debug.Log(activeSpawnersCount);
     }
     void Start()
     {

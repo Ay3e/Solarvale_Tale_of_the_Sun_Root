@@ -40,7 +40,8 @@ public class SparrowOnShoulder : MonoBehaviour
 
             // Calculate the time taken to find the sparrow
             TimeSpan timeTaken = DateTime.Now - searchStartTime;
-            Debug.Log("Time taken to find sparrow: " + timeTaken);
+            float timeTakenInSeconds = (float)timeTaken.TotalSeconds;
+            SaveManager.timeTakenToFindSparrow = timeTakenInSeconds;
 
             sparrowGameObject.transform.SetParent(sparrowSitLocation.transform, true);
             sparrowGameObject.transform.localPosition = Vector3.zero;

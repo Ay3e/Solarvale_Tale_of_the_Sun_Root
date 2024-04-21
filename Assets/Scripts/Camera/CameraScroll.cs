@@ -34,7 +34,7 @@ public class CameraScroll : MonoBehaviour
 
     void DisplayUp()
     {
-        Debug.Log("Displaying Up");
+        //Debug.Log("Displaying Up");
         // Implement your code to display content upwards
         if (currentPOV <= minPOV)
         {
@@ -49,7 +49,7 @@ public class CameraScroll : MonoBehaviour
 
     void DisplayDown()
     {
-        Debug.Log("Displaying Down");
+        //Debug.Log("Displaying Down");
         // Implement your code to display content downwards
         if (currentPOV >= maxPOV)
         {

@@ -25,13 +25,13 @@ public class PlantPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //When player is in trigger displayUI;
         canvasInteractiveUserInterfacePopUp.SetActive(true);
         nameOfInteractTMP.text = nameOfInteract;
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            SaveManager.flowersCollected++;
             canvasInteractiveUserInterfacePopUp?.SetActive(false);
             //Lupine UI
             InventoryManager.lupineAmount++;

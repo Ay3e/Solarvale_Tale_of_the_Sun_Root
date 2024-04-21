@@ -27,9 +27,6 @@ public class PhotoCapture : MonoBehaviour
     private Texture2D screenCapture;
     private bool viewingPhoto;
 
-    [Header("Analytics Details")]
-    private int numberOfPhotosCaptured = 0;
-
     private void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -56,7 +53,6 @@ public class PhotoCapture : MonoBehaviour
                 {
                     RemovePhoto();
                 }
-
             }
         }
         else
@@ -68,12 +64,7 @@ public class PhotoCapture : MonoBehaviour
     IEnumerator CapturePhoto()
     {
         //Analytics
-        numberOfPhotosCaptured++;
-        Debug.Log("numberOfPhotosCaptured: " + numberOfPhotosCaptured);
-        Analytics.CustomEvent("Photo Captured", new Dictionary<string, object>
-        {
-            { "Number of Photos Captured", numberOfPhotosCaptured }
-        });
+        SaveManager.photosTaken++;
 
         // Set all UI to false
         foreach (var ui in hideUI)

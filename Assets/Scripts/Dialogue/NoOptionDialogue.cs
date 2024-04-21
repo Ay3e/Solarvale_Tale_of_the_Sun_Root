@@ -37,7 +37,7 @@ public class NoOptionDialogue : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(currentDialogueIndex);
+        //Debug.Log(currentDialogueIndex);
         if (!ThirdPersonMovement.isInDialogue)
         {
             canvasInteractiveUserInterfacePopUp.SetActive(true);

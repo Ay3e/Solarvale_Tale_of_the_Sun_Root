@@ -37,6 +37,7 @@ public class InventoryManager : MonoBehaviour
         //textMeshProLupineAmount.text = lupineAmount.ToString();
         if (Input.GetKeyDown(KeyCode.B) && !ThirdPersonMovement.isInDialogue)
         {
+
             if (turnInventoryOn)
             {
                 submitButton.SetActive(true);
@@ -48,6 +49,11 @@ public class InventoryManager : MonoBehaviour
 
             //Freeze screen
             _isPaused = !_isPaused; // Toggle the isPaused flag
+            if (_isPaused)
+            {
+                //SaveManager increment bagOpened
+                SaveManager.timesBagOpened++;
+            }
             Time.timeScale = _isPaused ? 0f : 1f; // If isPaused is true, set timeScale to 0, otherwise set it to 1
             Debug.Log(_isPaused ? "Game paused" : "Game resumed");
         }

@@ -11,8 +11,6 @@ public class LitterPickUp : MonoBehaviour
     [SerializeField] private string nameOfInteract;
     [SerializeField] private TextMeshProUGUI nameOfInteractTMP;
 
-    private int numberOfLitterPickedUp = 0;
-
     void Update()
     {
 
@@ -22,11 +20,8 @@ public class LitterPickUp : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            numberOfLitterPickedUp++;
-            Analytics.CustomEvent("Litter picked up: ", new Dictionary<string, object>
-        {
-            { "Litter picked up: ", numberOfLitterPickedUp }
-        });
+            SaveManager.trashCollected++;
+
             parentObject.SetActive(false);
             canvasInteractiveUserInterfacePopUp?.SetActive(false);
             //Instead of destroying the object change the object
