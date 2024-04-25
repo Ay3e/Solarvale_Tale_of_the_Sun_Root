@@ -34,6 +34,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public static bool isInDialogue;
 
+    [SerializeField] private AudioSource audioWalkingOnLeaves;
+
     private void Start()
     {
         staminaMax = stamina;
@@ -51,6 +53,10 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (direction.magnitude >= 0.1f && !ThirdPersonMovement.isInDialogue)
         {
+            if (!audioWalkingOnLeaves.isPlaying)
+            {
+                audioWalkingOnLeaves.Play();
+            }
             animator.SetBool("isWalking", true);
             //Third Person Y
             if (SwitchingCamera.isThirdPersonCameraActive == true)
@@ -85,6 +91,7 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
+                    audioWalkingOnLeaves.pitch = 2f;
                     staminaGameObject.SetActive(true);
                     //player sprints
                     animator.speed = speedMultiplier*2;
@@ -94,12 +101,14 @@ public class ThirdPersonMovement : MonoBehaviour
                     //when player loses more than 6 seconds of stamina 
                     if (stamina <= 0)
                     {
+                        audioWalkingOnLeaves.pitch = 1f;
                         //become exhausted
                         playerHasExhausted = true;
                     }
                 }
                 else
                 {
+                    audioWalkingOnLeaves.pitch = 1f;
                     animator.speed = speedMultiplier;
                     speed = 12f;
                     if (stamina >= staminaMax)
@@ -132,17 +141,21 @@ public class ThirdPersonMovement : MonoBehaviour
             //if shift has been released player is not exhausted
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
+                audioWalkingOnLeaves.pitch = 2f;
                 playerHasExhausted = false;
             }
             // Check for jump input when moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
+                audioWalkingOnLeaves.Stop();
                 // Perform the jump
                 verticalVelocity = jumpForce;
+
             }
         }
         else
         {
+            audioWalkingOnLeaves.Stop();
             animator.SetBool("isWalking", false);
             speed = 12f;
             if (stamina >= staminaMax)
@@ -157,6 +170,7 @@ public class ThirdPersonMovement : MonoBehaviour
             // Check for jump input when not moving
             if (Input.GetKey(KeyCode.Space) && controller.isGrounded && !isInDialogue)
             {
+                audioWalkingOnLeaves.Stop();
                 // Perform the jump
                 verticalVelocity = jumpForce;
             }
