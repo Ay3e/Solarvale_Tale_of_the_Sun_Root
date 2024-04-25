@@ -23,7 +23,11 @@ public class InventoryManager : MonoBehaviour
     [Header("Album")]
     [SerializeField] private GameObject buttonAlbumTab;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioBagOpen;
 
+    [Header("HideUI")]
+    [SerializeField] private GameObject[] hideUI;
     private void Start()
     {
         inventoryUserInterface.SetActive(false);
@@ -37,7 +41,11 @@ public class InventoryManager : MonoBehaviour
         //textMeshProLupineAmount.text = lupineAmount.ToString();
         if (Input.GetKeyDown(KeyCode.B) && !ThirdPersonMovement.isInDialogue)
         {
-
+            for(int i = 0; i < hideUI.Length; i++)
+            {
+                hideUI[i].SetActive(!hideUI[i].activeSelf);
+            }
+            audioBagOpen.Play();
             if (turnInventoryOn)
             {
                 submitButton.SetActive(true);
@@ -60,6 +68,7 @@ public class InventoryManager : MonoBehaviour
 
         if (turnInventoryOn && ThirdPersonMovement.isInDialogue)
         {
+            audioBagOpen.Play();
             if (submitButtonOn)
             {
                 submitButton.SetActive(true);

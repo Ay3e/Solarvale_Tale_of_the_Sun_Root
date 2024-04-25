@@ -27,6 +27,8 @@ public class PhotoCapture : MonoBehaviour
     private Texture2D screenCapture;
     private bool viewingPhoto;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioPhotoShutter;
     private void Start()
     {
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -65,7 +67,7 @@ public class PhotoCapture : MonoBehaviour
     {
         //Analytics
         SaveManager.photosTaken++;
-
+        audioPhotoShutter.Play();
         // Set all UI to false
         foreach (var ui in hideUI)
         {

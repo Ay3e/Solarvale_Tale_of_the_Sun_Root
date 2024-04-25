@@ -10,6 +10,9 @@ public class ObjectivesManager : MonoBehaviour
     [SerializeField] private Transform parentObject;
     [SerializeField] private GameObject[] objectivesTextArray;
 
+    //Objective Names
+    public static bool talkedToLaura = false;
+
     private void Update()
     {
         for (int i = 0; i < objectivesTextArray.Length; i++)
@@ -26,9 +29,20 @@ public class ObjectivesManager : MonoBehaviour
                 // Move the object to the end of the parent object
                 objectivesTextArray[i].transform.SetAsLastSibling();
             }
-            else{
-                objectivesTextArray[i].SetActive(true);
-            }
+            //else
+            //{
+            //    objectivesTextArray[i].SetActive(true);
+
+                // Objective Stuff
+                //if (textMeshPro != null && textMeshPro.text == "Talk to Laura and show her your new gift")
+                //{
+                    //if (talkedToLaura)
+                    //{
+                        // Do something if talkedToLaura is true
+                        //textMeshPro.text = "";
+                    //}
+                //}
+            //}
         }
     }
 }

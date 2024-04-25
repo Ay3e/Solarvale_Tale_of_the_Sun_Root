@@ -33,6 +33,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private GameObject cameraCameraFirstPerson;
 
     public static bool isInDialogue;
+    public static bool isSprinting = false;
 
     [SerializeField] private AudioSource audioWalkingOnLeaves;
 
@@ -91,6 +92,7 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
+                    isSprinting = true;
                     audioWalkingOnLeaves.pitch = 2f;
                     staminaGameObject.SetActive(true);
                     //player sprints
@@ -108,6 +110,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 }
                 else
                 {
+                    isSprinting = false;
                     audioWalkingOnLeaves.pitch = 1f;
                     animator.speed = speedMultiplier;
                     speed = 12f;
@@ -141,6 +144,7 @@ public class ThirdPersonMovement : MonoBehaviour
             //if shift has been released player is not exhausted
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
+                isSprinting = true;
                 audioWalkingOnLeaves.pitch = 2f;
                 playerHasExhausted = false;
             }
@@ -155,6 +159,7 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         else
         {
+            isSprinting = false;
             audioWalkingOnLeaves.Stop();
             animator.SetBool("isWalking", false);
             speed = 12f;
